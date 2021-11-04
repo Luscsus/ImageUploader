@@ -1,0 +1,21 @@
+{
+  "name": "fileuploader",
+  "version": "1.0.0",
+  "description": "website where you can upload files under a specific name",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "file",
+    "uploader",
+    "javascript"
+  ],
+  "author": "Luka Grobelnik",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  }
+}

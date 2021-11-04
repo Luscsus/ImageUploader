@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Fileo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="app.js"></script> 
+        <div id="UploadBox" class="UploadBox" ondragleave="DragOverEnd(event)" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+            <div class="FileImageOutside">
+                <img id="FileImage" src="image.svg" class="image"/>
+            </div>
+            <p class="UploaderText">Drag and drop your image here</p>
+            <p class="UploaderText2"> Or</p>
+            <input type="file" id="upload" onchange="ReadFile(this)" hidden/>
+            <label id="uploadfile" for="upload">Choose file</label>
+        </div>
+        <p class="warningText" id="warningText"></p>
+
+        <h1 id="Header" class="Header">Upload your image or search</h1>
+        <p id="Explanation" class="Explanation">Write the word you wish to search or upload your own image</p>
+
+        <div id="FormsBox" class="FormsBox">
+            <form>
+                <div id="SearchFieldBox" class="SearchFieldbox">
+                    <input class="SearchField" placeholder="Input text" type="text" id="SearchField" name="SearchField"><br><br>      
+                </div>
+            </form>
+
+            <div class="Buttonbox">
+                <button id="Button1" class="UploadButton" onclick="Upload()">Upload</button>
+                <button id="Button2" class="SearchButton" onclick="Search()">Search</button>
+            </div>    
+        </div>
+
+        <div id="FinalImageOutside" class="FinalImageOutside"></div>
+            <img src="" alt="" onclick="OnFinalImageClick()" onmouseenter="OnFinalImageHover()" onmouseout="OnFinalImageUnHover()" id="FinalImage" class="FinalImage">
+                <img onmouseenter="OnFinalImageHover()" onclick="OnFinalImageClick()" src="zoomIn.png" id="ZoomIcon" class="ZoomIcon"></img>
+            </img>
+        </div>
+    <a href="https://github.com/Luscsus"><p class="Footer">Created by Luscsus</p></a>
+</body>
+</html>
