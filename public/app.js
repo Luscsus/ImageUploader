@@ -1,6 +1,7 @@
 var MaxLength = 12;
 var image = ""
 var FinalImageSwitch = true
+var UploadFile;
 
 function dropHandler(ev) {
     // Prevent default behavior (Prevent file from being opened)
@@ -13,6 +14,7 @@ function dropHandler(ev) {
         if (ev.dataTransfer.items[i].kind === 'file') {
           var file = ev.dataTransfer.items[i].getAsFile();
           ReadFileDrop(file)
+          console.log(file)
           
           // Set file image opacity to 1:
           var fileimage = document.getElementById("FileImage")
@@ -66,10 +68,9 @@ async function Upload()
         WarningText.innerHTML = "" // Remove the text warning
 
         // Check if files is present and is in image format:
-        var fileInput = document.getElementById('upload');
-        var filePath = fileInput.value;
+        var filePath = UploadFile;
 
-        if (filePath ==  "")
+        if (filePath == "")
         {
             WarningText.innerHTML = "Missing file"
         }
@@ -190,7 +191,7 @@ function DisplayFinalImage(image) {
     // Get the image and change it
     var FinalImage = document.getElementById("FinalImage")
     var FinalImageOutside = document.getElementById("FinalImageOutside")
-    FinalImageOutside.style.display = "block"
+    FinalImageOutside.style.display = "flex"
     FinalImage.style.display = "block"
     FinalImage.src = image
 }
@@ -224,6 +225,7 @@ function ReadFileDrop(input) {
         else {
             WarningText.innerHTML = "" // Remove the file warning
             var reader = new FileReader();
+            UploadFile = filePath;
 
             reader.onload = function (e) {
                 image = reader.result
