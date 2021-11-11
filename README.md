@@ -1,2 +1,4 @@
-# ImageUploader
-This is a image uploader, that lets you save an image under a specific title, that anyone can access.
+# ImageUploader:
+This is a image uploader, that lets you save an image under a specific title, that anyone can access. Just search for the title and voila the image is there. You can acces the website here: https://imageuploader0.herokuapp.com/, The website is hosted on heroku.
+# Problems:
+The website looks and runs horrible on smaller devices such as phones. I could try to fix this, but can't be bothered. Another problem is the database where the images are being stored is hosted on heroku as well as the code. The problem with this is that heroku only lets you host 500MB of files, which severily limits the amount of uploaded images. The obvious fix to this would be to use another hosting service for the database. But because no one is actually going to use this website, it should be fine.
