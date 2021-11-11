@@ -3,7 +3,7 @@ const express = require("express")
 var Datastore = require("nedb") 
 
 const app = express() // Define the server
-const port = 3000 // Define the port
+const port = process.env.PORT || 3000 // Define the port
 app.listen(port, () => {console.log("Running on port " + port)}) // Start listening at the correct port
 app.use(express.static('public')) // Start running the files in the public folder 
 app.use(express.json({ limit: '10mb' })) // Tell the server to read POST requests as json
