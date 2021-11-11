@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Fileo</title>
+    <title>ImageUploader</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
@@ -27,12 +27,12 @@
         <p class="warningText" id="warningText"></p>
 
         <h1 id="Header" class="Header">Upload your image or search</h1>
-        <p id="Explanation" class="Explanation">Write the word you wish to search or upload your own image</p>
+        <p id="Explanation" class="Explanation">Search for images or upload your own image</p>
 
         <div id="FormsBox" class="FormsBox">
             <form>
                 <div id="SearchFieldBox" class="SearchFieldbox">
-                    <input class="SearchField" placeholder="Input text" type="text" id="SearchField" name="SearchField"><br><br>      
+                    <input class="SearchField" placeholder="Search..." type="text" id="SearchField" name="SearchField"><br><br>      
                 </div>
             </form>
 
@@ -42,7 +42,7 @@
             </div>    
         </div>
 
-        <div id="FinalImageOutside" class="FinalImageOutside"></div>
+        <div id="FinalImageOutside" class="FinalImageOutside">
             <img src="" alt="" onclick="OnFinalImageClick()" onmouseenter="OnFinalImageHover()" onmouseout="OnFinalImageUnHover()" id="FinalImage" class="FinalImage">
                 <img onmouseenter="OnFinalImageHover()" onclick="OnFinalImageClick()" src="zoomIn.png" id="ZoomIcon" class="ZoomIcon"></img>
             </img>
